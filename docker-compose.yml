@@ -1,0 +1,14 @@
+services:
+  portfolio-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # mount your code so edits on the host show up instantly
+    volumes:
+      - ./:/app
+      # keep node_modules inside the container
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
