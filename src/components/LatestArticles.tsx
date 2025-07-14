@@ -2,32 +2,23 @@ import React from "react";
 
 const articles = [
   {
-    title: "Building Scalable React Applications with TypeScript",
-    date: "March 14, 2024",
-    readTime: "8 min read",
-    description:
-      "A comprehensive guide on architecting large-scale React applications using TypeScript, including best practices for component design, state management, and type safety.",
-    tags: ["React", "TypeScript", "Architecture"],
-    url: "#",
-  },
-  {
-    title: "Optimizing Database Performance in Node.js Applications",
-    date: "February 27, 2024",
-    readTime: "12 min read",
+    title: "MailHog: a Free, Containerized SMTP Server for Local Development",
+    date: "July 9, 2025",
+    readTime: "2 min read",
     description:
       "Learn advanced techniques for improving database performance in Node.js, including connection pooling, query optimization, and caching strategies.",
-    tags: ["Node.js", "Database", "Performance"],
-    url: "#",
+    tags: ["Docker", "Jest", "Mailhog", "Notification Tests", "SMTP"],
+    url: "https://dev.to/venuziano/mailhog-a-free-containerized-smtp-server-for-local-development-mea",
   },
   {
-    title: "Modern CSS Techniques for Responsive Design",
-    date: "January 19, 2024",
-    readTime: "6 min read",
+    title: "How to Optimize Search Queries in Large Databases with PostgreSQL",
+    date: "April 12, 2025",
+    readTime: "5 min read",
     description:
-      "Explore cutting-edge CSS features and techniques for creating responsive, accessible, and performant web interfaces in 2024.",
-    tags: ["CSS", "Responsive Design", "Web Development"],
-    url: "#",
-  },
+      "A comprehensive guide on how to optimize and scale database queries in large database sets using PostgreSQL.",
+    tags: ["Nestjs", "TypeScript", "PostgreSQL", "Performance", "TypeORM", "Swagger", "Docker", "SQL Migrations"],
+    url: "https://dev.to/venuziano/how-to-optimize-search-queries-in-large-databases-with-postgresql-and-gin-indexes-11b5",
+  }
 ];
 
 export default function LatestArticles() {
@@ -79,7 +70,7 @@ export default function LatestArticles() {
                 ))}
               </div>
 
-              <a href={article.url} className="read-btn mt-auto">
+              <a href={article.url} target="_blank" className="read-btn mt-auto">
                 Read Article
               </a>
             </div>

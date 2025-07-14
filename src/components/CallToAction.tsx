@@ -12,7 +12,7 @@ export default function CallToAction() {
           I’m always interested in new opportunities and exciting projects. Let’s discuss how we can bring your ideas to life.
         </p>
         <a
-          href="mailto:your@email.com"
+          href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
           className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold rounded-md px-6 h-12 shadow-md hover:bg-primary/90 transition-colors text-base"
         >
           <Mail size={20} />
