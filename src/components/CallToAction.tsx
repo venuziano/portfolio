@@ -6,7 +6,7 @@ export default function CallToAction() {
     <section className="w-full bg-[#282a2f] py-16 px-4">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-white mb-4">
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
         <p className="text-lg text-gray-400 mb-8">
           I’m always interested in new opportunities and exciting projects. Let’s discuss how we can bring your ideas to life.

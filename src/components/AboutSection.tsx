@@ -26,7 +26,7 @@ export default function AboutSection() {
               About Me
             </h2>
             <p className="text-base sm:text-lg text-gray-300">
-              I'm a passionate software engineer with over five years of experience
+              I&apos;m a passionate software engineer with over five years of experience
               building scalable web applications and digital solutions. I
               specialize in full-stack development, focusing on creating
               user-centric experiences with clean, maintainable code.
