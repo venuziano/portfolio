@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -46,35 +47,75 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="w-full bg-background py-16 px-0">
+    <section className="w-full py-16" style={{ backgroundColor: "var(--section-bg)" }}>
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-2 text-foreground">Featured Projects</h2>
-        <p className="text-muted-foreground text-center mb-10">A showcase of my recent work and technical expertise across various domains.</p>
+        <h2 className="text-4xl font-bold text-center mb-2 text-white">
+          Featured Projects
+        </h2>
+        <p className="text-center mb-10 text-lg text-gray-400">
+          A showcase of my recent work and technical expertise across various
+          domains.
+        </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <div key={idx} className="bg-[#23242a] rounded-xl shadow-lg flex flex-col overflow-hidden">
-              <div className="aspect-video bg-secondary flex items-center justify-center text-muted-foreground text-sm">Loading video...</div>
+            <div
+              key={idx}
+              className="bg-[#27272A] rounded-xl shadow-lg flex flex-col overflow-hidden"
+            >
+              <div className="aspect-video bg-[#27272A] flex items-center justify-center text-sm text-[#999999]">
+                Loading video...
+              </div>
+
               <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-muted-foreground uppercase">{project.type}</span>
-                  <span className="text-xs text-muted-foreground">{project.year}</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-block rounded-full bg-[#27272A] text-gray-300 text-xs font-semibold px-3 py-1">
+                    {project.type}
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold mb-1 text-foreground">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{project.description}</p>
-                <div className="mb-4">
-                  <span className="text-xs text-muted-foreground">Technologies</span>
-                  <div className="flex flex-wrap gap-2 mt-1">
+
+                <h3 className="text-lg font-bold mb-2 text-white">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-gray-300 mb-4 flex-1">
+                  {project.description}
+                </p>
+
+                <div className="mb-6">
+                  <span className="block mb-2 text-xs text-gray-400">
+                    Technologies
+                  </span>
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, i) => (
-                      <span key={i} className="bg-secondary text-secondary-foreground px-2 py-0.5 rounded text-xs font-medium">{tech}</span>
+                      <span
+                        key={i}
+                        className="bg-[#27272A] text-gray-300 text-xs font-medium px-3 py-1 rounded-full border border-[#35373B]"
+                      >
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
-                <div className="flex gap-2 mt-auto">
-                  <a href={project.codeUrl} className="bg-background border border-border text-foreground rounded px-4 py-2 text-sm font-semibold flex items-center gap-2 hover:bg-secondary transition-colors" target="_blank" rel="noopener noreferrer">
-                    <span className="hidden sm:inline">Code</span>
+
+                <div className="flex gap-4 mt-auto">
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 h-12 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-[#10151a] text-white border border-[#35373B] rounded-md hover:bg-[#27272A] transition-colors"
+                  >
+                    <Github size={18} />
+                    Code
                   </a>
-                  <a href={project.demoUrl} className="bg-primary text-primary-foreground rounded px-4 py-2 text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 transition-colors" target="_blank" rel="noopener noreferrer">
-                    <span className="hidden sm:inline">Live Demo</span>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 h-12 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-[#3bb0ff] text-white border border-transparent rounded-md hover:bg-[#3aa0e0] transition-colors"
+                  >
+                    <ExternalLink size={18} />
+                    Live Demo
                   </a>
                 </div>
               </div>
@@ -84,4 +125,4 @@ export default function FeaturedProjects() {
       </div>
     </section>
   );
-} 
+}

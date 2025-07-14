@@ -2,47 +2,116 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <section className="w-full py-16 px-0" style={{ background: "#23242a" }}>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 px-4">
-        {/* Video Embed/Placeholder */}
-        <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-          <div className="aspect-video w-full max-w-md bg-secondary rounded-lg flex items-center justify-center shadow-lg">
-            {/* Replace with actual video embed if available */}
-            <span className="text-muted-foreground text-sm">Video Placeholder</span>
+    <section className="w-full py-16 bg-[#282a2f]">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col gap-12">
+        {/* Row 1: Video + About */}
+        <div className="flex flex-col md:flex-row items-start gap-8">
+          {/* Video */}
+          <div className="w-full md:w-1/2">
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                src={process.env.NEXT_PUBLIC_VIDEO_URL}
+                controlsList="nodownload"
+              >
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+          </div>
+
+          {/* About text */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
+              About Me
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300">
+              I'm a passionate software engineer with over five years of experience
+              building scalable web applications and digital solutions. I
+              specialize in full-stack development, focusing on creating
+              user-centric experiences with clean, maintainable code.
+              <br />
+              <br />
+              My expertise extends across frontend frameworks, backend architecture,
+              observability, and cloud technologies. I also have experience working
+              as a QA engineer and systems analyst.
+            </p>
           </div>
         </div>
-        {/* Bio and Tech List */}
-        <div className="w-full md:w-1/2 max-w-xl">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">About Me</h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-6">
-            I'm a passionate software engineer with over 5 years of experience building scalable web applications and digital solutions. I specialize in full-stack development, focusing on creating user-centric experiences with clean, maintainable code.<br /><br />
-            My expertise spans from frontend frameworks to backend architecture, with a strong foundation in modern development practices and cloud technologies.
-          </p>
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Technologies & Services</h3>
-            <div className="flex flex-col sm:flex-row gap-8">
-              <div>
-                <h4 className="text-primary font-bold text-sm mb-2 uppercase tracking-wider">Frontend</h4>
-                <ul className="space-y-1 text-muted-foreground text-base">
-                  <li>React &amp; Next.js</li>
-                  <li>TypeScript</li>
-                  <li>Tailwind CSS</li>
-                  <li>Vue.js</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-primary font-bold text-sm mb-2 uppercase tracking-wider">Backend</h4>
-                <ul className="space-y-1 text-muted-foreground text-base">
-                  <li>Node.js &amp; Express</li>
-                  <li>Python &amp; Django</li>
-                  <li>PostgreSQL &amp; MongoDB</li>
-                  <li>AWS &amp; Docker</li>
-                </ul>
-              </div>
+
+        {/* Row 2: Technologies & Services */}
+        <div>
+          <h3 className="text-xl font-semibold mb-6 text-white">
+            Technologies & Services
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300 text-sm">
+            <div>
+              <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
+                Frontend
+              </h4>
+              <ul className="space-y-1">
+                <li>React, Next.js, Redux</li>
+                <li>TypeScript &amp; JavaScript</li>
+                <li>React Query &amp; SWR</li>
+                <li>Tailwind CSS, Bootstrap, MaterialUI, Ant Design, PrimeReact</li>
+                <li>PostCSS, Webpack, Vite</li>
+                <li>Jest &amp; Playwright</li>
+                <li>Progressive Web App (PWA)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
+                Backend
+              </h4>
+              <ul className="space-y-1">
+                <li>Node.js &amp; Express, NestJS, TypeScript</li>
+                <li>REST &amp; GraphQL APIs</li>
+                <li>PostgreSQL, MySQL &amp; Oracle</li>
+                <li>MongoDB, Amazon DocumentDB</li>
+                <li>Redis</li>
+                <li>MVC, DDD, Clean &amp; Event-Driven Arch.</li>
+                <li>Jest &amp; Playwright</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
+                DevOps
+              </h4>
+              <ul className="space-y-1">
+                <li>AWS, Vercel &amp; Heroku</li>
+                <li>SonarQube</li>
+                <li>Docker &amp; Rancher</li>
+                <li>GitHub Actions &amp; Bitbucket Pipelines</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
+                Observability
+              </h4>
+              <ul className="space-y-1">
+                <li>Sentry</li>
+                <li>CloudWatch</li>
+                <li>Google Analytics</li>
+                <li>Error Handling &amp; Log Monitoring</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
+                IA
+              </h4>
+              <ul className="space-y-1">
+                <li>Cursor, OpenAI</li>
+                <li>LangChain &amp; LangGraph &amp; LangSmith</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-} 
+}
