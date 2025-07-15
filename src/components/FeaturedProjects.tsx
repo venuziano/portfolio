@@ -9,6 +9,7 @@ const PROJECT_TYPE = {
   observability: "Observability",
   ia: "IA",
   blockchain: "Blockchain",
+  fullStack: "Full Stack",
 }
 
 const projects = [
@@ -27,7 +28,7 @@ const projects = [
     title: "Comic Book Converter",
     description:
       "Transform CBZ files into PDFs or EPUBs for your Kindle device or any other e-reader. No installation required, everything happens in your browser. Large files are processed in parallel using a Web Worker. Observability is built in with Sentry for error monitoring and Google Analytics for usage insights.",
-    technologies: ["Nextjs", "Typescript", "Sentry", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
+    technologies: ["Nextjs", "Typescript", "Sentry", "Vercel", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}cbz.png`,
     codeUrl: "https://github.com/venuziano/cbz-to-kindle",
@@ -38,7 +39,7 @@ const projects = [
     title: "PostgreSQL Database Optmization",
     description:
       "Efficient relational search across large datasets. This repo provides a scalable solution for querying millions of records with complex many-to-many relations. Library admins can instantly find books by title or category in a 2 million‑record books table joined to 20 million category mappings, and it adapts easily to any domain such as customers and licenses or inventory items.",
-    technologies: ["Nestjs", "PostgreSQL", "MVC", "Migrations", "Swagger", "TypeORM", "Docker"],
+    technologies: ["Nestjs", "PostgreSQL", "MVC", "Migrations", "Swagger", "TypeORM", "Docker", "REST API"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}pg-optmization.png`,
     codeUrl: "https://github.com/venuziano/high-performance-search-large-set-database/tree/main",
@@ -49,7 +50,7 @@ const projects = [
     title: "Observability with Google Analytics & Sentry",
     description:
       "Google Analytics is integrated into the comic book converter app to show where users come from, which devices and languages they use, and exactly how they interact. I’ve set up custom events for page views, file‑upload clicks (capturing file names), Convert button clicks, downloads, and other key actions. Sentry is used for real‑time error monitoring and performance tracing, capturing exceptions, stack traces and user context.",
-    technologies: ["Nextjs", "Google Analytics", "Sentry"],
+    technologies: ["Nextjs", "Typescript", "Google Analytics", "Sentry"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}ga.png`,
     codeUrl: "https://github.com/venuziano/cbz-to-kindle/blob/main/hooks/useGA.tsx",
@@ -57,10 +58,21 @@ const projects = [
     type: PROJECT_TYPE.observability,
   },
   {
+    title: "Expenses APP - Proof of Concept",
+    description:
+      "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category. Twilio and the WhatsApp Business Platform were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
+    technologies: ["Nestjs", "Typescript", "MVC", "Charts", "PostgreSQL", "Migrations", "Swagger", "TypeORM", "Twilio", "WhatsApp Business API", "TypeORM", "Github Actions", "AWS", "Docker", "React", "Tailwind CSS", "Vite", "Vercel"],
+    video: `${process.env.NEXT_PUBLIC_CND_URL}expenses-app-poc.mp4`,
+    image: null,
+    codeUrl: "https://github.com/venuziano/expenses-app",
+    demoUrl: null,
+    type: PROJECT_TYPE.fullStack,
+  },
+  {
     title: "Firebase & Google Maps Integration",
     description:
       "React app integrating directly with Google Maps and Firebase services, including Firestore for real‑time data storage, Firebase Authentication for email and Google sign‑in, and full PWA (Progressive Web Application) support for offline access and installability.",
-    technologies: ["React", "PWA", "Firebase", "Firestore", "Firebase Auth", "Google Maps"],
+    technologies: ["React", "PWA", "Firebase", "Firestore", "Firebase Auth", "Google Maps", "Surge.sh Cloud"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}firebase.png`,
     codeUrl: "https://github.com/venuziano/hands-on-firebase",
@@ -118,8 +130,16 @@ export default function FeaturedProjects() {
                   </div>
                 </a>
                 :
-                <div className="aspect-video bg-[#2A2A2E] flex items-center justify-center text-sm text-[#999999]">
-                  Loading video...
+                <div className="bg-[#2A2A2E] flex items-center justify-center text-sm text-[#999999]">
+                  {/* Loading video... */}
+                  <video
+                    className="w-full aspect-video"
+                    controls
+                    src={project.video}
+                    controlsList="nodownload"
+                  >
+                    Your browser does not support HTML5 video.
+                  </video>
                 </div>
               }
 

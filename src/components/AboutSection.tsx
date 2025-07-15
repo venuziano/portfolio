@@ -12,7 +12,7 @@ export default function AboutSection() {
               <video
                 className="w-full h-full object-cover"
                 controls
-                src={process.env.NEXT_PUBLIC_VIDEO_URL}
+                src={`${process.env.NEXT_PUBLIC_CND_URL}intro-video.mp4`}
                 controlsList="nodownload"
               >
                 Your browser does not support HTML5 video.
