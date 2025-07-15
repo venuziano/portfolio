@@ -5,7 +5,8 @@ import { Github, ExternalLink } from "lucide-react";
 const projects = [
   {
     title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and real-time order tracking.",
+    description:
+      "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and real-time order tracking.",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux", "Express"],
     video: null,
     codeUrl: "#",
@@ -15,7 +16,8 @@ const projects = [
   },
   {
     title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    description:
+      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
     technologies: ["React", "Firebase", "TypeScript", "Tailwind CSS"],
     video: null,
     codeUrl: "#",
@@ -25,7 +27,8 @@ const projects = [
   },
   {
     title: "AI Chat Application",
-    description: "An AI-powered chat application that leverages GPT-4 for natural language conversations, supporting multiple chat rooms and user authentication.",
+    description:
+      "An AI-powered chat application that leverages GPT-4 for natural language conversations, supporting multiple chat rooms and user authentication.",
     technologies: ["React", "OpenAI API", "Next.js", "MongoDB"],
     video: null,
     codeUrl: "#",
@@ -35,7 +38,8 @@ const projects = [
   },
   {
     title: "Weather Dashboard",
-    description: "A weather dashboard providing real-time weather updates, forecasts, and interactive charts using public APIs.",
+    description:
+      "A weather dashboard providing real-time weather updates, forecasts, and interactive charts using public APIs.",
     technologies: ["React", "TypeScript", "Chart.js", "Tailwind CSS"],
     video: null,
     codeUrl: "#",
@@ -47,7 +51,10 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="w-full py-16" style={{ backgroundColor: "var(--section-bg)" }}>
+    <section
+      className="w-full py-16"
+      style={{ backgroundColor: "var(--section-bg)" }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-2 text-white">
           Featured Projects
@@ -61,7 +68,19 @@ export default function FeaturedProjects() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-[#27272A] rounded-xl shadow-lg flex flex-col overflow-hidden"
+              className="
+                group
+                bg-[#27272A]              /* your base bg */
+                rounded-xl
+                shadow-lg
+                flex flex-col
+                overflow-hidden
+                border border-[#27272A]
+                transition-colors transition-opacity duration-200
+                hover:border-[#0284C5]     /* highlight border on hover */
+                hover:opacity-80           /* fade only the hovered card */
+                hover:shadow-xl hover:shadow-[#3bb0ff]/30
+              "
             >
               <div className="aspect-video bg-[#27272A] flex items-center justify-center text-sm text-[#999999]">
                 Loading video...
@@ -74,7 +93,7 @@ export default function FeaturedProjects() {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold mb-2 text-white">
+                <h3 className="text-lg font-bold mb-2 text-white transition-colors group-hover:text-[#0284C5]">
                   {project.title}
                 </h3>
 
@@ -103,7 +122,7 @@ export default function FeaturedProjects() {
                     href={project.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 h-12 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-[#10151a] text-white border border-[#35373B] rounded-md hover:bg-[#27272A] transition-colors"
+                    className="flex-1 h-12 inline-flex items-center justify-center gap-2 text-sm font-semibold bg-[#10151a] text-white border border-[#35373B] rounded-md hover:bg-[#27272A] hover:border-[#0284C5] transition-colors"
                   >
                     <Github size={18} />
                     Code

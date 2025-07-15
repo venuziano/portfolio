@@ -36,7 +36,7 @@ export default function LatestArticles() {
           {articles.map((article, idx) => (
             <div
               key={idx}
-              className="rounded-2xl shadow-lg p-6 flex flex-col h-full"
+              className="group rounded-2xl shadow-lg p-6 flex flex-col h-full"
               style={{ backgroundColor: "var(--card-bg)" }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -49,8 +49,7 @@ export default function LatestArticles() {
               </div>
 
               <h3
-                className="font-bold mb-2 leading-snug"
-                style={{ color: "var(--text-heading)", fontSize: "1.125rem" /* text-lg */ }}
+                className="font-bold mb-2 leading-snug text-[1.125rem] text-[color:var(--text-heading)] transition-colors group-hover:text-[#0284C5]"
               >
                 {article.title}
               </h3>
@@ -70,7 +69,11 @@ export default function LatestArticles() {
                 ))}
               </div>
 
-              <a href={article.url} target="_blank" className="read-btn mt-auto">
+              <a
+                href={article.url}
+                target="_blank"
+                className="read-btn mt-auto transition-colors group-hover:border-[#0284C5]"
+              >
                 Read Article
               </a>
             </div>
