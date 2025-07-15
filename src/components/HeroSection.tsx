@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Calendar } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -24,21 +24,22 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* <a
+          <a
             href="#contact"
-            className="bg-primary text-primary-foreground font-semibold rounded-md px-6 h-12 flex items-center justify-center min-w-[140px] transition-colors hover:bg-primary/90"
+            className="group bg-primary text-primary-foreground font-semibold rounded-md px-6 h-12 flex items-center justify-center min-w-[140px] transition-colors hover:bg-primary/90"
           >
+            <Calendar size={18} className="bounce-icon transition-transform mr-2" />
             Book a Call
-          </a> */}
+          </a>
 
           <a
             href={process.env.NEXT_PUBLIC_RESUME_URL}
             download
-            className="bg-[#10151a] text-white font-semibold rounded-md px-6 h-12 flex items-center gap-2 min-w-[180px] justify-center border border-[#35373b] transition-colors hover:bg-[#27272a]"
+            className="group bg-[#10151a] text-white font-semibold rounded-md px-6 h-12 flex items-center gap-2 min-w-[180px] justify-center border border-[#35373b] transition-colors hover:bg-[#27272a] hover:border-primary"
             target="_blank"
           >
-            <Download size={18} />
-            Download Resume
+            <Download size={18} className="bounce-icon transition-transform" />
+            Resume
           </a>
 
           <div className="flex gap-2">
@@ -46,26 +47,26 @@ export default function HeroSection() {
               href="https://github.com/venuziano"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] transition-colors"
+              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] hover:border-primary transition-colors group"
               aria-label="GitHub"
             >
-              <Github size={18} />
+              <Github size={18} className="transition-colors group-hover:text-primary" />
             </a>
             <a
               href="https://www.linkedin.com/in/rafaelrodr1gues/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] transition-colors"
+              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] hover:border-primary transition-colors group"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} />
+              <Linkedin size={18} className="transition-colors group-hover:text-primary" />
             </a>
             <a
               href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
-              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] transition-colors"
+              className="border border-[#35373b] rounded-md w-12 h-12 flex items-center justify-center hover:bg-[#27272a] hover:border-primary transition-colors group"
               aria-label="Email"
             >
-              <Mail size={18} />
+              <Mail size={18} className="transition-colors group-hover:text-primary" />
             </a>
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function CallToAction() {
           className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold rounded-md px-6 h-12 shadow-md hover:bg-primary/90 transition-colors text-base"
         >
           <Mail size={20} />
-          Get In Touch
+          Tell me about your project
         </a>
       </div>
     </section>
