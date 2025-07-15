@@ -50,7 +50,7 @@ export default function AboutSection() {
               <ul className="space-y-1">
                 <li>React, Next.js, Redux</li>
                 <li>TypeScript &amp; JavaScript</li>
-                <li>Figma to code</li>
+                <li>Figma to code &amp; Animations</li>
                 <li>React Query &amp; SWR</li>
                 <li>Tailwind CSS, Bootstrap, MaterialUI, Ant Design, PrimeReact</li>
                 <li>PostCSS, Webpack, Vite</li>

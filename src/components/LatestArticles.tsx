@@ -29,7 +29,7 @@ export default function LatestArticles() {
           Latest Articles
         </h2>
         <p className="text-center mb-10 text-lg" style={{ color: "var(--text-subtitle)" }}>
-          Insights, tutorials, and thoughts on software development and technology.
+          Insights and tutorials for modern software development.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
