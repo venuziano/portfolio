@@ -51,7 +51,7 @@ export default function AboutSection() {
                 <li>React, Next.js, Redux</li>
                 <li>TypeScript &amp; JavaScript</li>
                 <li>Figma to code &amp; Animations</li>
-                <li>React Query &amp; SWR</li>
+                <li>Tanstack/React Query &amp; SWR</li>
                 <li>Tailwind CSS, Bootstrap, MaterialUI, Ant Design, PrimeReact</li>
                 <li>PostCSS, Webpack, Vite</li>
                 <li>Jest &amp; Playwright</li>

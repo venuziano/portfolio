@@ -25,15 +25,15 @@ const projects = [
     type: PROJECT_TYPE.backend,
   },
   {
-    title: "Comic Book Converter",
+    title: "Job Keyword Extraction Agent",
     description:
-      "Transform CBZ files into PDFs or EPUBs for your Kindle device or any other e-reader. No installation required, everything happens in your browser. Large files are processed in parallel using a Web Worker. Observability is built in with Sentry for error monitoring and Google Analytics for usage insights.",
-    technologies: ["Nextjs", "Typescript", "Sentry", "Vercel", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
+      "A Python workflow that scrapes job‑posting URLs for their descriptions using Playwright, invokes an LLM via LangChain to extract a configurable number of keywords from each description, and orchestrates the steps with LangGraph’s StateGraph on Pydantic schemas to update your resume based on the new words.",
+    technologies: ["Python", "Opena AI LLM", "LangChain", "LangGraph", "LangSmith", "Playwright"],
     video: null,
-    image: `${process.env.NEXT_PUBLIC_CND_URL}cbz.png`,
-    codeUrl: "https://github.com/venuziano/cbz-to-kindle",
-    demoUrl: "https://www.cbz-to-pdf.com.br/",
-    type: PROJECT_TYPE.frontend,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}jb-extract.png`,
+    codeUrl: "https://github.com/venuziano/AIgent-extract-jb-words",
+    demoUrl: null,
+    type: PROJECT_TYPE.ia,
   },
   {
     title: "PostgreSQL Database Optmization",
@@ -47,10 +47,21 @@ const projects = [
     type: PROJECT_TYPE.backend,
   },
   {
+    title: "Comic Book Converter",
+    description:
+      "Transform CBZ files into PDFs or EPUBs for your Kindle device or any other e-reader. No installation required, everything happens in your browser. Large files are processed in parallel using a Web Worker. Observability is built in with Sentry for error monitoring and Google Analytics for usage insights.",
+    technologies: ["Nextjs", "Typescript", "Sentry", "Vercel", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
+    video: null,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}cbz.png`,
+    codeUrl: "https://github.com/venuziano/cbz-to-kindle",
+    demoUrl: "https://www.cbz-to-pdf.com.br/",
+    type: PROJECT_TYPE.frontend,
+  },
+  {
     title: "Observability with Google Analytics & Sentry",
     description:
       "Google Analytics is integrated into the comic book converter app to show where users come from, which devices and languages they use, and exactly how they interact. I’ve set up custom events for page views, file‑upload clicks (capturing file names), Convert button clicks, downloads, and other key actions. Sentry is used for real‑time error monitoring and performance tracing, capturing exceptions, stack traces and user context.",
-    technologies: ["Nextjs", "Typescript", "Google Analytics", "Sentry"],
+    technologies: ["Nextjs", "Typescript", "Sentry", "Google Analytics",],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}ga.png`,
     codeUrl: "https://github.com/venuziano/cbz-to-kindle/blob/main/hooks/useGA.tsx",
@@ -60,11 +71,22 @@ const projects = [
   {
     title: "Expenses APP - Proof of Concept",
     description:
-      "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category. Twilio and the WhatsApp Business Platform were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
-    technologies: ["Nestjs", "Typescript", "MVC", "Charts", "PostgreSQL", "Migrations", "Swagger", "TypeORM", "Twilio", "WhatsApp Business API", "TypeORM", "Github Actions", "AWS", "Docker", "React", "Tailwind CSS", "Vite", "Vercel"],
+      "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category. Twilio and the WhatsApp Business Platform services were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
+    technologies: ["Nestjs", "Typescript", "MVC", "REST API", "PostgreSQL", "Migrations", "Swagger", "TypeORM", "Twilio", "WhatsApp Business API", "TypeORM", "Github Actions", "AWS", "Docker", "React", "Tailwind CSS", "Vite", "Vercel"],
     video: `${process.env.NEXT_PUBLIC_CND_URL}expenses-app-poc.mp4`,
     image: null,
     codeUrl: "https://github.com/venuziano/expenses-app",
+    demoUrl: null,
+    type: PROJECT_TYPE.fullStack,
+  },
+  {
+    title: "Sonar Panel APP - Proof of Concept",
+    description:
+      "Solar Panel POC Backend provides a Node.js/Express API for managing solar panel installations with JWT authentication, role‑based access control, cost savings calculations and weather integration. It supports two roles: admins can create and view installations; technicians can only view them. The API includes endpoints to create new installations and list existing ones with optional status filtering and pagination. Annual cost savings are calculated from panel capacity, sun hours (fetched via OpenWeatherMap), system efficiency and local electricity rate.",
+    technologies: ["Nodejs", "Express", "RBAC", "REST API", "Jest", "React", "Tanstack/React Query", "OpenWeatherMap API"],
+    video: null,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}solar-poc.png`,
+    codeUrl: "https://github.com/venuziano/solar-panel-poc/tree/main",
     demoUrl: null,
     type: PROJECT_TYPE.fullStack,
   },
@@ -78,6 +100,17 @@ const projects = [
     codeUrl: "https://github.com/venuziano/hands-on-firebase",
     demoUrl: "https://dirty-plants.surge.sh/",
     type: PROJECT_TYPE.frontend,
+  },
+  {
+    title: "Smart Auth",
+    description:
+      "This app was developed as part of my final thesis for my Information Systems degree. SmartAuth enables authentication of any digital file on Ethereum’s Rinkeby testnet. The solution extracts each document’s hash, submits it to the blockchain via a smart contract, and allows verification that the document has not been altered or counterfeited.",
+    technologies: ["React", "Node", "Geth", "Truffle.js", "Solidity", "Web.js", "REST API"],
+    video: null,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}smart-auth.png`,
+    codeUrl: "https://github.com/venuziano/SmartAuth",
+    demoUrl: null,
+    type: PROJECT_TYPE.blockchain,
   },
 ];
 
@@ -126,6 +159,7 @@ export default function FeaturedProjects() {
                       alt={project.title}
                       fill
                       priority={false}
+                      // className="object-contain"
                     />
                   </div>
                 </a>
