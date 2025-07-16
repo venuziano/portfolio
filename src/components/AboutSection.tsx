@@ -19,14 +19,14 @@ export default function AboutSection() {
               </video>
             </div>
           </div>
-
+ 
           {/* About text */}
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
               About Me
             </h2>
             <p className="text-base sm:text-lg text-gray-300">
-              {"I'm a passionate software engineer with over five years of experience building scalable web applications and digital solutions. I specialize in full-stack development, focusing on creating user-centric experiences with clean, maintainable code."}
+              {"I'm a passionate software engineer with over five years of experience building scalable applications and digital solutions. I specialize in full stack development and ship production level applications with regular release cycles, focusing on delivering intuitive, high‑performance solutions underpinned by a modular, well‑tested codebase."}
               <br />
               <br />
               My expertise extends across frontend frameworks, backend architecture,
@@ -64,11 +64,12 @@ export default function AboutSection() {
                 Backend
               </h4>
               <ul className="space-y-1">
-                <li>Node.js &amp; Express, NestJS, TypeScript</li>
-                <li>REST &amp; GraphQL APIs</li>
-                <li>PostgreSQL, MySQL &amp; Oracle</li>
-                <li>MongoDB, Amazon DocumentDB</li>
+                <li>Node.js, Express, Nest.js</li>
+                <li>TypeScript</li>
                 <li>Redis</li>
+                <li>REST &amp; GraphQL APIs</li>
+                <li>PostgreSQL, MySQL, Oracle</li>
+                <li>MongoDB, Amazon DocumentDB</li>
                 <li>MVC, DDD, Clean &amp; Event-Driven Arch.</li>
                 <li>Jest &amp; Playwright</li>
               </ul>
@@ -79,10 +80,10 @@ export default function AboutSection() {
                 DevOps
               </h4>
               <ul className="space-y-1">
-                <li>AWS, Vercel &amp; Heroku</li>
+                <li>AWS, Vercel, Heroku</li>
                 <li>SonarQube</li>
-                <li>Docker &amp; Rancher</li>
-                <li>GitHub Actions &amp; Bitbucket Pipelines</li>
+                <li>Docker, Rancher</li>
+                <li>GitHub Actions &amp; Bitbucket Pipeline</li>
               </ul>
             </div>
 

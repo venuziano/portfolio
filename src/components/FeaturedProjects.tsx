@@ -16,8 +16,8 @@ const projects = [
   {
     title: "GraphQL API with DDD (Domain Driven Design) & Clean Architecture",
     description:
-      "A monolithic GraphQL API for a library app. Authors, books, book categories, and users are exposed via the GraphQL server using a mix of synchronous orchestration and event‑driven patterns. Data is persisted in PostgreSQL, notifications are handled through a queue with retry logic, and caching is implemented in two layers (L1 in‑memory and L2 via Redis). The codebase includes unit, integration, and end‑to‑end tests written with Jest.",
-    technologies: ["GraphQL", "Nestjs", "Typescript", "PostgreSQL", "DDD", "Clean Architecture", "Bull", "Redis", "Event Bus", "Jest", "Docker"],
+      "A monolithic GraphQL API for a library app. Authors, books, book categories, and users entities are exposed via the GraphQL server using a mix of synchronous orchestration and event‑driven architecture. Data is persisted in PostgreSQL, notifications are handled through a queue with retry logic, and caching is implemented in two layers (L1 in‑memory and L2 via Redis). The codebase includes unit, integration, and end‑to‑end tests written with Jest.",
+    technologies: ["GraphQL", "Nest.js", "Typescript", "PostgreSQL", "DDD", "Clean Architecture", "Bull", "Redis", "Event Bus", "Jest", "Docker"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}graphql-api.png`,
     codeUrl: "https://github.com/venuziano/library-app",
@@ -28,7 +28,7 @@ const projects = [
     title: "Job Keyword Extraction Agent",
     description:
       "A Python workflow that scrapes job‑posting URLs for their descriptions using Playwright, invokes an LLM via LangChain to extract a configurable number of keywords from each description, and orchestrates the steps with LangGraph’s StateGraph on Pydantic schemas to update your resume based on the new words.",
-    technologies: ["Python", "Opena AI LLM", "LangChain", "LangGraph", "LangSmith", "Playwright"],
+    technologies: ["Python", "LLM", "LangChain", "LangGraph", "LangSmith", "Playwright"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}jb-extract.png`,
     codeUrl: "https://github.com/venuziano/AIgent-extract-jb-words",
@@ -38,8 +38,8 @@ const projects = [
   {
     title: "PostgreSQL Database Optmization",
     description:
-      "Efficient relational search across large datasets. This repo provides a scalable solution for querying millions of records with complex many-to-many relations. Library admins can instantly find books by title or category in a 2 million‑record books table joined to 20 million category mappings, and it adapts easily to any domain such as customers and licenses or inventory items.",
-    technologies: ["Nestjs", "PostgreSQL", "MVC", "Migrations", "Swagger", "TypeORM", "Docker", "REST API"],
+      "Efficient relational search across large datasets. This repository provides a scalable solution for querying millions of records with complex many-to-many relations. Library admins can instantly find books by title or category in a 2 million‑record books table joined to 20 million category mappings. It adapts easily to any domain such as customers, licenses, inventory items and others.",
+    technologies: ["Nest.js", "PostgreSQL", "MVC", "Migrations", "Swagger", "TypeORM", "Docker", "REST API"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}pg-optmization.png`,
     codeUrl: "https://github.com/venuziano/high-performance-search-large-set-database/tree/main",
@@ -50,7 +50,7 @@ const projects = [
     title: "Comic Book Converter",
     description:
       "Transform CBZ files into PDFs or EPUBs for your Kindle device or any other e-reader. No installation required, everything happens in your browser. Large files are processed in parallel using a Web Worker. Observability is built in with Sentry for error monitoring and Google Analytics for usage insights.",
-    technologies: ["Nextjs", "Typescript", "Sentry", "Vercel", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
+    technologies: ["Next.js", "Typescript", "Sentry", "Vercel", "Google Analytics", "Animation", "Tailwind CSS", "i18n", "Web Worker", "PDF Creation", "Docker"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}cbz.png`,
     codeUrl: "https://github.com/venuziano/cbz-to-kindle",
@@ -61,7 +61,7 @@ const projects = [
     title: "Observability with Google Analytics & Sentry",
     description:
       "Google Analytics is integrated into the comic book converter app to show where users come from, which devices and languages they use, and exactly how they interact. I’ve set up custom events for page views, file‑upload clicks (capturing file names), Convert button clicks, downloads, and other key actions. Sentry is used for real‑time error monitoring and performance tracing, capturing exceptions, stack traces and user context.",
-    technologies: ["Nextjs", "Typescript", "Sentry", "Google Analytics",],
+    technologies: ["Next.js", "Typescript", "Google Analytics", "Sentry",],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}ga.png`,
     codeUrl: "https://github.com/venuziano/cbz-to-kindle/blob/main/hooks/useGA.tsx",
@@ -71,8 +71,8 @@ const projects = [
   {
     title: "Expenses APP - Proof of Concept",
     description:
-      "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category. Twilio and the WhatsApp Business Platform services were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
-    technologies: ["Nestjs", "Typescript", "MVC", "REST API", "PostgreSQL", "Migrations", "Swagger", "TypeORM", "Twilio", "WhatsApp Business API", "TypeORM", "Github Actions", "AWS", "Docker", "React", "Tailwind CSS", "Vite", "Vercel"],
+      "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category automatically. Twilio and the WhatsApp Business Platform services were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
+    technologies: ["Nest.js", "Typescript", "MVC", "REST API", "PostgreSQL", "Migrations", "Swagger", "TypeORM", "Twilio", "WhatsApp Business API", "TypeORM", "Github Actions", "AWS", "Docker", "React", "Tailwind CSS", "Vite", "Vercel"],
     video: `${process.env.NEXT_PUBLIC_CND_URL}expenses-app-poc.mp4`,
     image: null,
     codeUrl: "https://github.com/venuziano/expenses-app",
@@ -80,9 +80,9 @@ const projects = [
     type: PROJECT_TYPE.fullStack,
   },
   {
-    title: "Sonar Panel APP - Proof of Concept",
+    title: "Sonar Panel - MVP",
     description:
-      "Solar Panel POC Backend provides a Node.js/Express API for managing solar panel installations with JWT authentication, role‑based access control, cost savings calculations and weather integration. It supports two roles: admins can create and view installations; technicians can only view them. The API includes endpoints to create new installations and list existing ones with optional status filtering and pagination. Annual cost savings are calculated from panel capacity, sun hours (fetched via OpenWeatherMap), system efficiency and local electricity rate.",
+      "The backend provides a Node.js/Express API for managing solar panel installations with JWT authentication, role‑based access control, cost savings calculations and weather integration. It supports two roles: admins can create and view installations; technicians can only view them. The API includes endpoints to create new installations and list existing ones with optional status filtering and pagination. Annual cost savings are calculated from panel capacity, sun hours (fetched via OpenWeatherMap API), system efficiency and local electricity rate.",
     technologies: ["Nodejs", "Express", "RBAC", "REST API", "Jest", "React", "Tanstack/React Query", "OpenWeatherMap API"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}solar-poc.png`,
@@ -104,7 +104,7 @@ const projects = [
   {
     title: "Smart Auth",
     description:
-      "This app was developed as part of my final thesis for my Information Systems degree. SmartAuth enables authentication of any digital file on Ethereum’s Rinkeby testnet. The solution extracts each document’s hash, submits it to the blockchain via a smart contract, and allows verification that the document has not been altered or counterfeited.",
+      "App developed as part of my final thesis for my Information Systems degree. SmartAuth enables authentication of any digital file on Ethereum’s Rinkeby testnet. The solution extracts each document’s hash, submits it to the blockchain via a smart contract, and allows verification that the document has not been altered or counterfeited. This makes it possible to prove that a given contract, for example, exists and remains immutable.",
     technologies: ["React", "Node", "Geth", "Truffle.js", "Solidity", "Web.js", "REST API"],
     video: null,
     image: `${process.env.NEXT_PUBLIC_CND_URL}smart-auth.png`,

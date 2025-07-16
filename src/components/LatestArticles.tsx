@@ -16,7 +16,7 @@ const articles = [
     readTime: "5 min read",
     description:
       "A comprehensive guide on how to optimize and scale database queries in large database sets using PostgreSQL.",
-    tags: ["Nestjs", "TypeScript", "PostgreSQL", "Performance", "TypeORM", "Swagger", "Docker", "SQL Migrations"],
+    tags: ["Nest.js", "TypeScript", "PostgreSQL", "Performance", "TypeORM", "Swagger", "Docker", "SQL Migrations"],
     url: "https://dev.to/venuziano/how-to-optimize-search-queries-in-large-databases-with-postgresql-and-gin-indexes-11b5",
   }
 ];

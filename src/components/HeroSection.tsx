@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Download, Github, Linkedin, Mail, Calendar } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -30,13 +30,13 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
+          {/* <a
             href="#contact"
             className="group bg-primary text-primary-foreground font-semibold rounded-md px-6 h-12 flex items-center justify-center min-w-[140px] transition-colors hover:bg-primary/90"
           >
             <Calendar size={18} className="bounce-icon transition-transform mr-2" />
             Book a Call
-          </a>
+          </a> */}
 
           <a
             href={process.env.NEXT_PUBLIC_RESUME_URL}
