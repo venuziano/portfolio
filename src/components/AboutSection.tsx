@@ -42,7 +42,7 @@ export default function AboutSection() {
             Technologies & Services
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300">
             <div>
               <h4 className="text-sm uppercase tracking-wider font-bold mb-2 text-[#3bb0ff]">
                 Frontend
