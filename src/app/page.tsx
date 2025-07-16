@@ -17,7 +17,6 @@ export default function Home() {
     if (typeof window === "undefined") return;
 
     const currentUrl = window.location.href;
-    console.log('currentUrl', currentUrl)
     logPageView(currentUrl);
   }, [logPageView]);
 
