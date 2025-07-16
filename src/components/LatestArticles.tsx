@@ -2,6 +2,7 @@ import React from "react";
 
 const articles = [
   {
+    id: 1,
     title: "MailHog: a Free, Containerized SMTP Server for Local Development",
     date: "July 9, 2025",
     readTime: "2 min read",
@@ -11,6 +12,7 @@ const articles = [
     url: "https://dev.to/venuziano/mailhog-a-free-containerized-smtp-server-for-local-development-mea",
   },
   {
+    id: 2,
     title: "How to Optimize Search Queries in Large Databases with PostgreSQL",
     date: "April 12, 2025",
     readTime: "5 min read",
@@ -33,9 +35,9 @@ export default function LatestArticles() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, idx) => (
+          {articles.map((article) => (
             <div
-              key={idx}
+              key={article.id}
               className="group rounded-2xl shadow-lg p-6 flex flex-col h-full"
               style={{ backgroundColor: "var(--card-bg)" }}
             >

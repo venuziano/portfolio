@@ -14,6 +14,7 @@ const PROJECT_TYPE = {
 
 const projects = [
   {
+    id: 1,
     title: "GraphQL API with DDD (Domain Driven Design) & Clean Architecture",
     description:
       "A monolithic GraphQL API for a library app. Authors, books, book categories, and users entities are exposed via the GraphQL server using a mix of synchronous orchestration and event‑driven architecture. Data is persisted in PostgreSQL, notifications are handled through a queue with retry logic, and caching is implemented in two layers (L1 in‑memory and L2 via Redis). The codebase includes unit, integration, and end‑to‑end tests written with Jest.",
@@ -25,6 +26,7 @@ const projects = [
     type: PROJECT_TYPE.backend,
   },
   {
+    id: 2,
     title: "Job Keyword Extraction Agent",
     description:
       "A Python workflow that scrapes job‑posting URLs for their descriptions using Playwright, invokes an LLM via LangChain to extract a configurable number of keywords from each description, and orchestrates the steps with LangGraph’s StateGraph on Pydantic schemas to update your resume based on the new words.",
@@ -36,6 +38,7 @@ const projects = [
     type: PROJECT_TYPE.ia,
   },
   {
+    id: 3,
     title: "PostgreSQL Database Optmization",
     description:
       "Efficient relational search across large datasets. This repository provides a scalable solution for querying millions of records with complex many-to-many relations. Library admins can instantly find books by title or category in a 2 million‑record books table joined to 20 million category mappings. It adapts easily to any domain such as customers, licenses, inventory items and others.",
@@ -47,6 +50,7 @@ const projects = [
     type: PROJECT_TYPE.backend,
   },
   {
+    id: 4,
     title: "Comic Book Converter",
     description:
       "Transform CBZ files into PDFs or EPUBs for your Kindle device or any other e-reader. No installation required, everything happens in your browser. Large files are processed in parallel using a Web Worker. Observability is built in with Sentry for error monitoring and Google Analytics for usage insights.",
@@ -58,6 +62,7 @@ const projects = [
     type: PROJECT_TYPE.frontend,
   },
   {
+    id: 5,
     title: "Observability with Google Analytics & Sentry",
     description:
       "Google Analytics is integrated into the comic book converter app to show where users come from, which devices and languages they use, and exactly how they interact. I’ve set up custom events for page views, file‑upload clicks (capturing file names), Convert button clicks, downloads, and other key actions. Sentry is used for real‑time error monitoring and performance tracing, capturing exceptions, stack traces and user context.",
@@ -69,6 +74,7 @@ const projects = [
     type: PROJECT_TYPE.observability,
   },
   {
+    id: 6,
     title: "Expenses APP - Proof of Concept",
     description:
       "Proof of concept demonstrating a workflow in which customers send expense details via WhatsApp and an API records each entry in the appropriate category automatically. Twilio and the WhatsApp Business Platform services were evaluated for cost comparison. The API and database run on AWS and the frontend is hosted on Vercel.",
@@ -80,6 +86,7 @@ const projects = [
     type: PROJECT_TYPE.fullStack,
   },
   {
+    id: 7,
     title: "Sonar Panel - MVP",
     description:
       "The backend provides a Node.js/Express API for managing solar panel installations with JWT authentication, role‑based access control, cost savings calculations and weather integration. It supports two roles: admins can create and view installations; technicians can only view them. The API includes endpoints to create new installations and list existing ones with optional status filtering and pagination. Annual cost savings are calculated from panel capacity, sun hours (fetched via OpenWeatherMap API), system efficiency and local electricity rate.",
@@ -91,6 +98,7 @@ const projects = [
     type: PROJECT_TYPE.fullStack,
   },
   {
+    id: 8,
     title: "Firebase & Google Maps Integration",
     description:
       "React app integrating directly with Google Maps and Firebase services, including Firestore for real‑time data storage, Firebase Authentication for email and Google sign‑in, and full PWA (Progressive Web Application) support for offline access and installability.",
@@ -102,6 +110,7 @@ const projects = [
     type: PROJECT_TYPE.frontend,
   },
   {
+    id: 9,
     title: "Smart Auth",
     description:
       "App developed as part of my final thesis for my Information Systems degree. SmartAuth enables authentication of any digital file on Ethereum’s Rinkeby testnet. The solution extracts each document’s hash, submits it to the blockchain via a smart contract, and allows verification that the document has not been altered or counterfeited. This makes it possible to prove that a given contract, for example, exists and remains immutable.",
