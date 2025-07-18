@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-// import * as Sentry from "@sentry/nextjs";
 import { cookies } from 'next/headers';
 
 const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
@@ -20,7 +19,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'GA ID or API Secret missing' }, { status: 500 });
   }
 
-  const { category, action, label, page, fileName, fileSize } = await req.json();
+  const { category, action, page } = await req.json();
 
   const payload = {
     client_id: await getClientId(),
@@ -30,15 +29,9 @@ export async function POST(req: NextRequest) {
         page_location: page || undefined,
         debug_mode: 1,
         category: category,
-        label: label || '',
-        ...(fileName && fileSize && {
-          file_info: `${fileName}_FILE_SIZE:_${fileSize}`
-        })
       }
     }]
   };
-
-
 
   try {
     const response = await fetch(
@@ -58,7 +51,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: 'Event Sent Successfully' });
   } catch (error) {
-    // Sentry.captureException(error);
     console.log('error', error)
     return NextResponse.json({ message: 'Error Sending Event' }, { status: 500 });
   }

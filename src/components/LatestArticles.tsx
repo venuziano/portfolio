@@ -2,17 +2,27 @@ import React from "react";
 
 const articles = [
   {
-    id: 1,
-    title: "MailHog: a Free, Containerized SMTP Server for Local Development",
-    date: "July 9, 2025",
-    readTime: "2 min read",
+    id: 13,
+    title: "Building Robust Task Queues and Event‑Driven Workflows in NestJS with Event Bus, Redis, and Bull",
+    date: "July 18, 2025",
+    readTime: "6 min read",
     description:
-      "Learn advanced techniques for improving database performance in Node.js, including connection pooling, query optimization, and caching strategies.",
-    tags: ["Docker", "Jest", "Mailhog", "Notification Tests", "SMTP"],
+      "This article demonstrates how to build a message-driven workflow in NestJS using the Event Bus and Bull queues. It covers a real-world use case involving the sending of verification emails when a user registers. By using events, the system becomes more modular and easier to test. Bull handles background job execution, retries, and failure recovery, providing a reliable and fault-tolerant processing layer.",
+    tags: ["Nest.js", "Bull", "Redis", "Event Bus", "Queue"],
     url: "https://dev.to/venuziano/mailhog-a-free-containerized-smtp-server-for-local-development-mea",
   },
   {
     id: 2,
+    title: "MailHog: a Free, Containerized SMTP Server for Local Development",
+    date: "July 9, 2025",
+    readTime: "2 min read",
+    description:
+      "This article shows how to implement a message‑driven workflow in NestJS using its built‑in Event Bus together with Redis‑backed Bull queues. As a concrete use case, we’ll send a verification email whenever a new user registers.",
+    tags: ["Docker", "Jest", "Mailhog", "Notification Tests", "SMTP"],
+    url: "https://dev.to/venuziano/mailhog-a-free-containerized-smtp-server-for-local-development-mea",
+  },
+  {
+    id: 1,
     title: "How to Optimize Search Queries in Large Databases with PostgreSQL",
     date: "April 12, 2025",
     readTime: "5 min read",

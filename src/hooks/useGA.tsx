@@ -1,13 +1,9 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
-// import * as Sentry from "@sentry/nextjs";
 
 export interface IRecordGAReturnProperties {
   category: string
   action: string
-  label?: string
-  fileName?: string
-  fileSize?: string
 }
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
@@ -43,5 +39,22 @@ export const useGA = () => {
     }
   };
 
-  return { logPageView };
+  const recordGa = async (properties: IRecordGAReturnProperties): Promise<void> => {
+    try {
+      await fetch('/api/monitoring', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          category: properties.category,
+          action: properties.action,
+        }),
+      });
+    } catch (error) {
+      console.error('GA Event Error:', error);
+    }
+  };
+
+  return { logPageView, recordGa };
 };

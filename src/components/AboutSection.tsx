@@ -1,6 +1,10 @@
+import { useGA } from "@/hooks/useGA";
 import React from "react";
 
 export default function AboutSection() {
+  const { recordGa } = useGA();
+
+
   return (
     <section className="w-full py-16 bg-[#282a2f]">
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-12">
@@ -11,6 +15,7 @@ export default function AboutSection() {
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
+                onPlay={() => recordGa({ category: 'Interaction', action: 'about-me-video' })}
                 controls
                 src={`${process.env.NEXT_PUBLIC_CND_URL}intro-video.mp4`}
                 controlsList="nodownload"
