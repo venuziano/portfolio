@@ -9,7 +9,7 @@ const articles = [
     description:
       "This article demonstrates how to build a message-driven workflow in NestJS using the Event Bus and Bull queues. It covers a real-world use case involving the sending of verification emails when a user registers. By using events, the system becomes more modular and easier to test. Bull handles background job execution, retries, and failure recovery, providing a reliable and fault-tolerant processing layer.",
     tags: ["Nest.js", "Bull", "Redis", "Event Bus", "Queue"],
-    url: "https://dev.to/venuziano/mailhog-a-free-containerized-smtp-server-for-local-development-mea",
+    url: "https://shifters.dev/blogs/building-robust-task-queues-and-eventdriven-workflows-in-nestjs-with-event-bus-redis-and-bull",
   },
   {
     id: 2,
