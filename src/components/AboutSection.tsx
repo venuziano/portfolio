@@ -15,7 +15,7 @@ export default function AboutSection() {
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
               <video
                 className="w-full h-full object-cover"
-                onPlay={() => recordGa({ category: 'Interaction', action: 'about-me-video' })}
+                onPlay={() => recordGa({ category: 'Interaction', action: 'about_me_video' })}
                 controls
                 src={`${process.env.NEXT_PUBLIC_CND_URL}intro-video.mp4`}
                 controlsList="nodownload"
