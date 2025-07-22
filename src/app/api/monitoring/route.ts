@@ -27,7 +27,6 @@ export async function POST(req: NextRequest) {
       name: action,  
       params: {
         page_location: page || undefined,
-        debug_mode: 1,
         category: category,
         label: ""
       }
