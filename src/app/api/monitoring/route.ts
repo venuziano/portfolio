@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
         page_location: page || undefined,
         debug_mode: 1,
         category: category,
+        label: ""
       }
     }]
   };
