@@ -86,8 +86,10 @@ export default function AboutSection() {
               </h4>
               <ul className="space-y-1">
                 <li>AWS, Vercel, Heroku</li>
+                <li>Kubernetes</li>
+                <li>Terraform</li>
+                <li>Docker</li>
                 <li>SonarQube</li>
-                <li>Docker, Rancher</li>
                 <li>GitHub Actions &amp; Bitbucket Pipeline</li>
               </ul>
             </div>
