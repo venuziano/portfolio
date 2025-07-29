@@ -33,6 +33,7 @@ export default function HeroSection() {
           <a
             href="https://calendly.com/raf4-rrs/30min?back=1"
             className="group bg-primary text-primary-foreground font-semibold rounded-md px-6 h-12 flex items-center justify-center min-w-[140px] transition-colors hover:bg-primary/90"
+            target="_blank"
           >
             <Calendar size={18} className="bounce-icon transition-transform mr-2" />
             Book a Call
