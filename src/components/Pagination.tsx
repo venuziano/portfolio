@@ -47,7 +47,7 @@ export default function Pagination({
               cursor-pointer
             "
           >
-            <span className="font-semibold text-lg">Load more</span>
+            <span className="font-semibold text-lg">More projects</span>
             <ChevronDown 
               size={20} 
               className="
