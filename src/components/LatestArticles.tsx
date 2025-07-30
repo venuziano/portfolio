@@ -4,13 +4,23 @@ import Pagination from "./Pagination";
 const articles = [
   {
     id: crypto.randomUUID(),
+    title: "Terraform + AWS Free Tier, From Zero to Test Deployment: A 20‑Minute Playground",
+    date: "July 30, 2025",
+    readTime: "7 min read",
+    description:
+      "This article shows how to use Terraform and AWS’s new $200 Free Tier credits to provision a complete test environment in minutes. It walks through VPC networking, EKS compute, RDS, ElastiCache, and CloudWatch logging, highlights best‑practice patterns and variable management, and provides a sample setup for a 5,000‑user load.",
+    tags: ["Terraform", "AWS", "DevOps", "RDS", "EKS", "ElastiCache"],
+    url: "https://dev.to/venuziano/from-zero-to-test-deployment-terraform-aws-free-tier-a-30-minute-playground-599",
+  },
+  {
+    id: crypto.randomUUID(),
     title: "Building Robust Task Queues and Event‑Driven Workflows in NestJS with Event Bus, Redis, and Bull",
     date: "July 18, 2025",
     readTime: "6 min read",
     description:
       "This article demonstrates how to build a message-driven workflow in NestJS using the Event Bus and Bull queues. It covers a real-world use case involving the sending of verification emails when a user registers. By using events, the system becomes more modular and easier to test. Bull handles background job execution, retries, and failure recovery, providing a reliable and fault-tolerant processing layer.",
     tags: ["Nest.js", "Bull", "Redis", "Event Bus", "Queue"],
-    url: "https://shifters.dev/blogs/building-robust-task-queues-and-eventdriven-workflows-in-nestjs-with-event-bus-redis-and-bull",
+    url: "https://dev.to/venuziano/building-robust-task-queues-and-event-driven-workflows-in-nestjs-with-event-bus-using-redis-and-bull-38c3",
   },
   {
     id: crypto.randomUUID(),
@@ -45,9 +55,9 @@ export default function LatestArticles() {
           Insights and tutorials for modern software development.
         </p>
 
-        <Pagination items={articles} itemsPerPage={6}>
+        <Pagination items={articles} itemsPerPage={4}>
           {(displayedArticles) => (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {displayedArticles.map((article) => (
                 <div
                   key={article.id}
