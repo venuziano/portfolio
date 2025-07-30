@@ -34,7 +34,7 @@ const projects = [
       "A GraphQL API exposed to a robust cloud infrastructure, provisioned via Terraform with AWS services like RDS, ElastiCache, and EKS. Containerized applications are built as optimized Docker images with cached npm modules for faster deployments. Deployed to Kubernetes using custom YAML definitions, with health checks configured to ensure high reliability. GitHub Actions orchestrates the CI/CD pipeline for automated builds, testing, and production rollouts.",
     technologies: ["Terraform", "Kubernetes", "AWS", "RDS", "ElastiCache", "EKS", "GitHub Actions", "CI/CD", "Docker"],
     video: null,
-    image: `${process.env.NEXT_PUBLIC_CND_URL}terraform1.png`,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}terraform.png`,
     codeUrl: "https://github.com/venuziano/library-app/tree/main/src/infrastructure/cloud",
     demoUrl: null,
     type: PROJECT_TYPE.devOps,
