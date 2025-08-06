@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: crypto.randomUUID(),
-    title: "TRCP API with Nest, Zod, React, Typescript and Shadcn.",
+    title: "TRCP API with Nest, Zod, React, Typescript and Shadcn",
     description: "A monorepo housing a React+TypeScript frontend and a NestJS backend, both containerized with Docker and orchestrated via Docker Compose. The frontend leverages Vite for fast builds, shadcn/ui with Tailwind CSS for theming, and TanStack React Query combined with tRPC for end-to-end type-safe data fetching. The backend follows a modular DDD architecture using NestJS, TypeORM with PostgreSQL, JWT-based role access control, Zod for schema validation, and automated migrations with seeding. The setup ensures dynamic data loading, responsive design, server-side business logic, lazy loading with skeleton states, and comprehensive error resilience.",
     technologies: ["React", "TypeScript", "shadcn/ui", "TanStack React Query", "tRPC","NestJS", "DDD", "TypeORM", "PostgreSQL","Zod", "Docker"],
     video: null,
