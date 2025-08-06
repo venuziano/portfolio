@@ -41,6 +41,17 @@ const projects = [
   },
   {
     id: crypto.randomUUID(),
+    title: "TRCP API with Nest, Zod, React, Typescript and Shadcn.",
+    description: "A monorepo housing a React+TypeScript frontend and a NestJS backend, both containerized with Docker and orchestrated via Docker Compose. The frontend leverages Vite for fast builds, shadcn/ui with Tailwind CSS for theming, and TanStack React Query combined with tRPC for end-to-end type-safe data fetching. The backend follows a modular DDD architecture using NestJS, TypeORM with PostgreSQL, JWT-based role access control, Zod for schema validation, and automated migrations with seeding. The setup ensures dynamic data loading, responsive design, server-side business logic, lazy loading with skeleton states, and comprehensive error resilience.",
+    technologies: ["React", "TypeScript", "shadcn/ui", "TanStack React Query", "tRPC","NestJS", "DDD", "TypeORM", "PostgreSQL","Zod", "Docker"],
+    video: null,
+    image: `${process.env.NEXT_PUBLIC_CND_URL}trcp.png`,
+    codeUrl: "https://github.com/venuziano/braintrust",
+    demoUrl: null,
+    type: PROJECT_TYPE.fullStack,
+  },
+  {
+    id: crypto.randomUUID(),
     title: "Job Keyword Extraction Agent",
     description:
       "A Python workflow that scrapes job‑posting URLs for their descriptions using Playwright, invokes an LLM via LangChain to extract a configurable number of keywords from each description, and orchestrates the steps with LangGraph's StateGraph on Pydantic schemas to update your resume based on the new words.",
