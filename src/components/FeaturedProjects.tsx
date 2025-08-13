@@ -12,6 +12,7 @@ const PROJECT_TYPE = {
   ia: "IA",
   blockchain: "Blockchain",
   fullStack: "Full Stack",
+  mobile: "Mobile",
 }
 
 const projects = [
@@ -38,6 +39,17 @@ const projects = [
     codeUrl: "https://github.com/venuziano/library-app/tree/main/src/infrastructure/cloud",
     demoUrl: null,
     type: PROJECT_TYPE.devOps,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Real-Time Privacy Camera — Face & License Plate Detection with On-Device Blur",
+    description: "Android-first React Native (bare) camera app that performs on-device face & license-plate detection and applies selective OpenGL ES (GLSL) blur masks in real time. Built with VisionCamera + Kotlin frame-processor plugins and Google ML Kit. Includes video capture and lightweight HUD metrics. Source code is private due to contract obligations.",
+    technologies: ["React Native (bare)", "react-native-vision-camera (Camera2)", "Kotlin", "OpenGL ES / GLSL", "Google ML Kit", "Android / Gradle", "TypeScript"],
+    video: `${process.env.NEXT_PUBLIC_CND_URL}rn-face-blur.mp4`,
+    image: null,
+    codeUrl: null,
+    demoUrl: null,
+    type: PROJECT_TYPE.mobile,
   },
   {
     id: crypto.randomUUID(),
@@ -245,7 +257,7 @@ export default function FeaturedProjects() {
                     </div>
 
                     <div className="flex gap-4 mt-auto">
-                      <a
+                      {project.codeUrl === null ? <></> : <a
                         href={project.codeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -253,7 +265,8 @@ export default function FeaturedProjects() {
                       >
                         <Github size={18} />
                         Code
-                      </a>
+                      </a>}
+                      
                       {project.demoUrl === null ? <></> : <a
                         href={project.demoUrl as string}
                         target="_blank"
